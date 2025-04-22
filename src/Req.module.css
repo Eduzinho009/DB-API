@@ -1,0 +1,26 @@
+.inicio{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+}
+.backBtn{
+    color: #090909 !important;
+    margin-left: 120px;
+    opacity: 0.5;
+    transition: all 150ms ease-in-out;
+    font-size: 30px;
+}
+
+.backBtn:hover{
+    opacity: 1;
+}
+
+.wrapCardsRow{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
