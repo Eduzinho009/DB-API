@@ -1,20 +1,22 @@
 import style from "./App.module.css";
-import { Btn } from "./components/btn";
+//import { Btn } from "./components/btn";
 import { Menu } from "./components/menu";
-import { Card } from "./components/card";
+//import { Card } from "./components/card";
 
-//import p1 from "./assets/images/p1.jpeg";
-import { cards } from './assets/mock/cards';
+import p1 from "./assets/images/s2-imagen.png";
+
+import logo from "./assets/images/image.png"
+//import { cards } from './assets/mock/cards';
 
 import { useState } from "react";
 
 function App() {
-  const defaultPhoneNumber = "5541999999999";
+  const defaultPhoneNumber = "5541997545587";
 
   const [formData, setFormData] = useState({
-    name: "",
+    nome: "",
     email: "",
-    message: "",
+    Mensagem: "",
   });
 
   const handleChange = (e) => {
@@ -35,22 +37,24 @@ function App() {
 
   return (
     <>
-      <Menu s1="Home" s2="Sessão 2" s3="CONTATO" s4="Calculos" s5="Consumindo API" />
+      <Menu s1="Inspiração" s2="Quer falar com o Dev"/>
       <main>
         <section id="s1" className={style.s1}>
-          {/* <Btn text="proxima sessão" func="#s2"/> <br /> */}  
-          {cards.map((item, index) => {
-            return (
-              <div key={index}>
-                <Card text={item.text} img={item.img} alt={item.text}/>
-              </div>
-            )
-          })}
-           
+          <img src={logo} alt="" />
+           <button><a href={'/requisicao'}>Acessar a nossa API</a></button>
         </section>
         <section id="s2" className={style.s2}>
-          <Btn text="volta pra cima" func="#s1" />
-          <h2>Contato</h2>
+          <div className="s2-texto">
+              <h1>Inspiração</h1>
+              <h4>O conceito de uma API inspirada em Dragon Ball geralmente surge do desejo de tornar acessível a vasta quantidade de informações do universo da franquia. Desde personagens icônicos e suas transformações até poderes, sagas e locais emblemáticos, uma API pode organizar e estruturar esses dados de forma eficiente para desenvolvedores e fãs.</h4>
+              <button><a href="https://www.youtube.com/watch?v=VuY0ABWfjSE">o que é dragon ball?</a></button>
+          </div>
+          <div className="s2-imagen">
+            <img src={p1} alt="seila" />
+          </div>
+        </section>
+        <section id="s3" className={style.s3}>
+          <h1>Quer falar com o DEV</h1>
           <div>
             <label htmlFor="name">Nome</label>
             <input
