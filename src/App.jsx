@@ -16,7 +16,7 @@ function App() {
   const [formData, setFormData] = useState({
     nome: "",
     email: "",
-    Mensagem: "",
+    Assunto: "",
   });
 
   const handleChange = (e) => {
@@ -37,26 +37,23 @@ function App() {
 
   return (
     <>
-      <Menu s1="Inspiração" s2="Quer falar com o Dev"/>
+      <Menu s1="API" s2="Quer falar com o Dev" style={{width: "100%"}}/>
       <main>
+
+
         <section id="s1" className={style.s1}>
-          <img src={logo} alt="" />
-           <button><a href={'/requisicao'}>Acessar a nossa API</a></button>
+          <img src={logo} alt="principio" className={style.logoS1}/>
+          <div className={style.butao}>
+           <button><a href={'/requisicao'} style={{fontSize: "14px"}}>Acessar a nossa API</a></button>
+           </div>
         </section>
-        <section id="s2" className={style.s2}>
-          <div className="s2-texto">
-              <h1>Inspiração</h1>
-              <h4>O conceito de uma API inspirada em Dragon Ball geralmente surge do desejo de tornar acessível a vasta quantidade de informações do universo da franquia. Desde personagens icônicos e suas transformações até poderes, sagas e locais emblemáticos, uma API pode organizar e estruturar esses dados de forma eficiente para desenvolvedores e fãs.</h4>
-              <button><a href="https://www.youtube.com/watch?v=VuY0ABWfjSE">o que é dragon ball?</a></button>
-          </div>
-          <div className="s2-imagen">
-            <img src={p1} alt="seila" />
-          </div>
-        </section>
-        <section id="s3" className={style.s3}>
-          <h1>Quer falar com o DEV</h1>
-          <div>
-            <label htmlFor="name">Nome</label>
+
+
+        <section id="s3" className={style.s2}>
+          <h1>Quer falar com o DEV?</h1>
+          <h5>coloque as informações nos blocos de textos e coloque o seu assunto</h5>
+          
+          <div className={style.inputS2}>
             <input
               type="text"
               id="name"
@@ -64,10 +61,11 @@ function App() {
               value={formData.name}
               onChange={handleChange}
               required
+              placeholder="Nome"
             />
           </div>
-          <div>
-            <label htmlFor="email">E-mail</label>
+
+          <div className={style.inputS2}>
             <input
               type="email"
               id="email"
@@ -75,10 +73,12 @@ function App() {
               value={formData.email}
               onChange={handleChange}
               required
+              placeholder="Email"
             />
           </div>
-          <div>
-            <label htmlFor="message">Mensagem</label>
+
+          <div className={style.mensagemS2}>
+            <label htmlFor="message">Assunto:</label><br />
             <textarea
               name="message"
               id="message"
@@ -89,8 +89,15 @@ function App() {
               required
             ></textarea>
           </div>
-          <button onClick={handleZap}>Enviar mensagem</button>
+
+        <div className={style.botoesS2}>
+          <button onClick={handleZap} className={style.botaoS2}>Enviar mensagem</button>
+          <a href="https://www.youtube.com/watch?v=VuY0ABWfjSE" style={{fontSize: "14px"}} className={style.queroNota}>o que é dragon ball?</a>
+          </div>
+
         </section>
+
+
       </main>
     </>
   );
