@@ -1,3 +1,5 @@
+
+
 body{
     background-color: #212529;
 }
@@ -12,8 +14,15 @@ body{
 .sairAPI{
     margin-top: 40px;
     margin-left: 20px;
+    transition: all 150ms ease-in-out;
+}
+.sairAPI:hover{
+    transform: scale(1.2);
 }
 
+.wrapinput{
+
+}
 .inputAPI {
     width: 230px;
     height: 50px;
@@ -22,22 +31,34 @@ body{
     border-Radius: 999px;
     border: 2px solid white;
     transition: all 2;
-    scale: 1.2;
+    scale: 1.1;
     transition: all 250ms ease-in-out;
     background-color: transparent;
     font-size: 12px;
     text-align: center;
     color: white;
+    margin-top: 2vh;
 }
 
 .inputAPI:hover{
     scale: 1.3;
     border: 2px solid rgb(255, 255, 255);
 }
-.wrapCardsRow{
+.wrapCardsRow {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 30px;
   }
+
+  @media (min-width: 1000px) {
+    .sairAPI{
+        margin-top: 60px;
+        margin-left: 210px;
+    }
+    .imagemAPI{
+        scale: 1.3;
+    }
+    
+  } 

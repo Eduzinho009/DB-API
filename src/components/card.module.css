@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Readex+Pro:wght@300&display=swap');
+
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -11,11 +13,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 350px; 
+    width: 300px; 
     min-height: 500px;
+    height: auto;
     margin: 0 auto; 
     border-radius: 10px; 
-    background-color: gray;
+    background-image: url(../assets/images/fundo-API.png);
+    background-position: center -20px;
+    background-size: 100% 60vh;
 }
 
 .img {
@@ -31,11 +36,30 @@
 }
 
 .texto {
-    background-color: black;
+    background-color: #131518;
     color: white;
     text-align: start;
     padding: 10px;
     font-size: 1rem;
     width: 100%;
-    border-radius: 8px;
+    border-radius: 0px;
+}
+
+.texto p , strong, h3{
+    font-family: "Lexend Deca", sans-serif;
+}
+
+.texto h3{
+    font-size: 40px;
+    color: white;
+    text-align: center;
+}
+
+.texto p{
+    color: #fbc02d;
+    text-align: center;
+}
+.texto strong{
+    color: #ffffff;
+    font-size: 22px;
 }

@@ -36,12 +36,13 @@ export default function Req() {
     return (
         <>
         <a href={"/"} >
-            <img src={sair} alt="botao" className={style.sairAPI} style={{ width: "50px", cursor: "pointer" }} />
+            <img src={sair} alt="botao" className={style.sairAPI} style={{ width: "40px", cursor: "pointer" }} />
         </a>
             <br /><br /><br />
             <section className={style.inicio}>
-                <img src={logo} alt="logo" style={{width: "50vh"}} />
+                <img src={logo} alt="logo" className={style.imagemAPI}style={{width: "47vh"}} />
                 <br />
+                <div className={style.wrapinput}>
                 <input className={style.inputAPI}
                     type="text"
                     placeholder="Pesquisar personagem..."
@@ -68,12 +69,20 @@ export default function Req() {
                         }
                     }}
                 />
+                </div>
                 {erro && <p style={{ color: "red" }}>Essa Página não existe, é de 1 até 6</p>}
                 <br /><br />
                 <div className={style.wrapCardsRow}>
                     {filteredData.map((item, index) => (
                         <div className={style.wrapAll1} key={index}>
-                            <Card img={item.image} text={item.name} />
+                            <Card 
+                                img={item.image} 
+                                text={item.name} 
+                                power={item.ki} 
+                                race={item.race} 
+                                maxKi={item.maxKi} 
+                                affiliation={item.affiliation} 
+                            />
                         </div>
                     ))}
                 </div>
