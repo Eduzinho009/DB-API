@@ -20,7 +20,27 @@ body{
     transform: scale(1.2);
 }
 
-.wrapinput{
+.butaoFundo{
+    display: flex;
+    justify-content: center;
+    background-color: #131518;
+    height: 8vh;
+}
+.butaoFundo button{
+    margin-bottom: 15px;
+    border-Radius: 999px;
+    border: 2px solid white;
+    transition: all 250ms ease-in-out;
+    background-color: transparent;
+    color: white;
+    font-size: 12px;
+    width: 190px;
+    height: 40px;
+}
+.butaoFundo button:hover{
+    scale: 1.1;
+    background-color: white;
+    color: black;
 
 }
 .inputAPI {
@@ -30,9 +50,8 @@ body{
     padding: 10px;
     border-Radius: 999px;
     border: 2px solid white;
-    transition: all 2;
-    scale: 1.1;
     transition: all 250ms ease-in-out;
+    scale: 1.1;
     background-color: transparent;
     font-size: 12px;
     text-align: center;
