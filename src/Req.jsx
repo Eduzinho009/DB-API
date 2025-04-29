@@ -33,10 +33,10 @@ export default function Req() {
 
     return (
         <>
-            {/* Verificação adicional para garantir que o modal não quebre */}
-            {modal !== undefined && data[modal] && (
-                <ModalInfo data={data[modal]} close={() => setModal(undefined)} />
+            {modal !== undefined && (
+            <ModalInfo data={data.find((char) => char.id === modal)} close={() => setModal(undefined)} />
             )}
+
 
             <a href={"/"} >
                 <img src={sair} alt="botao" className={style.sairAPI} style={{ width: "40px", cursor: "pointer" }} />
@@ -80,9 +80,10 @@ export default function Req() {
                         <div className={style.wrapAll1} key={index}>
                             <Card img={item.image} text={item.name} />
                             <div className={style.butaoFundo}>
-                            <button style={{ maxWidth: "70%", marginTop: "10px"}} onClick={() => setModal(index)}>
-                                Informação - {item.name}
+                            <button style={{ maxWidth: "70%", marginTop: "10px"}} onClick={() => setModal(item.id)}>
+                            Informação - {item.name}
                             </button>
+
                             </div>
                         </div>
                     ))}
