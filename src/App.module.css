@@ -164,6 +164,25 @@
   font-weight: 400;
 }
 
+.video{
+  background-color: transparent;
+  color: white;
+  padding: 8px 15px;
+  border: 2px solid #ffffff;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 14.5px;
+  margin-left: 12px;
+  transition: all 150ms ease-in-out;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.videolegal{
+  margin-top: 30px;
+  width: 40vh;
+}
+
+
 
 @media (min-width: 1000px) {
   
@@ -216,5 +235,24 @@
   .mensagemS2 label{    
     margin-top: 15px;
     margin-left: -30px;
+  }
+
+  .video{
+    background-color: transparent;
+    color: white;
+    padding: 8px 15px;
+    border: 2px solid #ffffff;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 14.5px;
+    margin-left: 12px;
+    transition: all 150ms ease-in-out;
+    font-family: "Lexend Deca", sans-serif;
+  }
+
+  .videolegal{
+    margin-top: 30px;
+    width: 100vh;
+    height: 40vh;
   }
 }
